@@ -1,0 +1,20 @@
+m = peripheral.wrap("right")
+m.setTextScale(4)
+startpos = 12
+speed = 0.2
+text = "Experimental Zone!"
+
+pos = startpos
+poslimit = 0 - startpos
+
+while true do
+  m.clear()
+  m.setCursorPos(pos, 1)
+  m.write(text)
+  sleep(speed)
+  if pos == poslimit then
+    pos = startpos
+  else
+    pos = pos - 1
+  end
+end

@@ -1,0 +1,12 @@
+m = peripheral.wrap("top")
+
+m.clear()
+m.setTextScale(3)
+m.setCursorPos(2,1)
+m.write("Commands")
+m.setCursorPos(2,3)
+m.write("cd - change dir")
+m.setCursorPos(2,4)
+m.write("ls - list files")
+m.setCursorPos(2,6)
+m.write("example: cd rom")

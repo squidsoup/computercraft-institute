@@ -1,0 +1,7 @@
+mon = peripheral.wrap("top")
+mon.clear()
+mon.setTextScale(5)
+mon.setCursorPos(2,2)
+mon.write("Turtle")
+mon.setCursorPos(2,4)
+mon.write("Power!")

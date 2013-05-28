@@ -1,0 +1,7 @@
+local arg = { ... }
+
+if arg[1] then
+  print("Howdy "..arg[1].."!")
+else
+  print("Please enter a name e.g. hello joe")
+end

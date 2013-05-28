@@ -1,0 +1,11 @@
+local mon = peripheral.wrap("right")
+
+mon.clear()
+mon.setTextScale(2)
+mon.setCursorPos(1,2)
+mon.write("   Welcome to")
+mon.setCursorPos(1,3)
+mon.write("   ComputerCraft")
+mon.setCursorPos(1,4)
+mon.write("   Room 3!")
+

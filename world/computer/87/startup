@@ -1,0 +1,5 @@
+m = peripheral.wrap("right")
+m.clear()
+
+m.setTextScale(5)
+m.write("Experimental Zone")

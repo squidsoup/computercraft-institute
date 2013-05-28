@@ -1,0 +1,24 @@
+os.pullEvent = os.pullEventRaw
+
+local side = "left"
+local password = "letmein"
+local opentime = 3
+
+while true do
+  term.clear()
+  term.setCursorPos(1,1)
+  write("Enter Password: ")
+  local input = read("*")
+  
+  if input == password then
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Access Granted.")
+    rs.setOutput(side, true)
+    sleep(opentime)
+    rs.setOutput(side, false)
+  else
+    print("Incorrect password.")
+    sleep(2)
+  end
+end

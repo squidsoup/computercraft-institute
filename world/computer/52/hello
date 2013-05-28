@@ -1,0 +1,19 @@
+-- This is a little more advanced, so don't worry
+-- if you don't understand it right now! :)
+
+-- arg is an "argument", it's an extra string
+-- passed to the program.
+-- when you type "hello joe", "joe" is the argument
+
+local arg = { ... }
+
+-- We need to check if the user gave us an argument
+-- If they did, we say Howdy!
+
+if arg[1] then
+  print("Howdy "..arg[1].."!")
+else
+
+-- If they didn't we give them an error message.
+  print("Please enter a name. example: hello joe")
+end

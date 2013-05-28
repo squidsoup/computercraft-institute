@@ -1,0 +1,15 @@
+term.clear()
+term.setCursorPos(1,1)
+print("Initialising Rednet for Turtle #"..os.getComputerID())
+rednet.open("left")
+rednet.broadcast("bot/active/"..os.getComputerID())
+print("Waiting for commands")
+while true do
+  sleep(0.1)
+  event,cpu,message = os.pullEvent()
+  if event == "rednet_message" then
+    print("Message received: "..message)
+    shell.run(message)
+    rednet.send(cpu,"bot/done")
+  end
+end

@@ -1,0 +1,5 @@
+while true do
+  turtle.forward()
+  turtle.forward()
+  turtle.turnLeft()
+end

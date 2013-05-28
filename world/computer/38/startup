@@ -1,0 +1,5 @@
+local modem = peripheral.wrap("right")
+modem.open(5)
+
+modem.transmit(5, 5, turtle.forward())
+

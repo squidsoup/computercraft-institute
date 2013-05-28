@@ -1,0 +1,7 @@
+mon = peripheral.wrap("top")
+mon.clear()
+mon.setTextScale(5)
+mon.setCursorPos(3,2)
+mon.write("Lesson")
+mon.setCursorPos(3,4)
+mon.write("Four")

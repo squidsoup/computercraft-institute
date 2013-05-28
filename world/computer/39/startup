@@ -1,0 +1,6 @@
+rednet.open("left")
+print("Waiting for commands")
+id, message = rednet.receive()
+while true do
+  shell.run(message)
+end

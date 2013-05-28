@@ -1,0 +1,52 @@
+function failsafe()
+  turtle.select(1)
+  if not turtle.compareTo(14) then
+    print("No more Saplings")
+    print("Press any button to shutdown computer...")
+    os.pullEvent("key")
+    stop()
+  end
+  turtle.select(2)
+  if not turtle.compareTo(15) then
+    print("No more Bone Meal")
+    print("Press any button to shutdown computer...")
+    os.pullEvent("key")
+    stop()
+  end
+  turtle.select(3)
+  if not turtle.compareTo(16) then
+    print("No more fuel")
+    print("Press any button to shutdown computer...")
+    os.pullEvent("key")
+    stop()
+  end
+end
+function stop()
+  os.shutdown()
+end
+function chop() --Creates the function chop() for the wood chopping algorithm.
+  turtle.dig()
+  turtle.digUp()
+  turtle.up()
+end
+Bonemealcount = 20 --Sets the number of times it will place bonemeal on the sapling. I don't recommend changing this as this ensures the trees will grow and don't worry, it won't use bonemeal when the tree is already grown.
+
+while true do
+  failsafe()
+  while turtle.getFuelLevel() <= 20 do --Checks if a refuel is needed and if it is needed it will refuel.
+    turtle.select(3)
+    turtle.refuel(1)
+  end
+  turtle.select(1) --Selects and places sapling.
+  turtle.place()
+  turtle.select(2) --Selects bonemeal.
+  for i = 1, Bonemealcount do --Places bonemeal on sapling.
+    turtle.place()
+  end
+  while turtle.detect() do --Wood chopping algorithm.
+    chop()
+  end
+  while not turtle.detectDown() do --Goes down until it reaches the ground.
+    turtle.down()
+  end
+end

@@ -1,0 +1,5 @@
+m = peripheral.wrap("top")
+image = paintutils.loadImage("recipe")
+term.redirect(m)
+paintutils.drawImage(image, 1, 1)
+term.restore()

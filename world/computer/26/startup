@@ -1,0 +1,8 @@
+mon = peripheral.wrap("top")
+mon.clear()
+mon.setTextScale(4)
+mon.setCursorPos(2,3)
+mon.write("Our first")
+mon.setCursorPos(2,4)
+mon.write("Program!")
+
